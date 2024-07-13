@@ -13,19 +13,8 @@ const getSum = () => {
         sum += parseFloat(priceElement.textContent);
     });
 
-    // Create a new row for the total price
-    const totalRow = document.createElement("tr");
-
-    // Create a single cell that spans both columns
-    const totalCell = document.createElement("td");
-    totalCell.setAttribute("colspan", "2");
-    totalCell.textContent = `Total Price: Rs ${sum}`;
-
-    // Append the cell to the new row
-    totalRow.appendChild(totalCell);
-
-    // Append the new row to the table
-    document.querySelector("table").appendChild(totalRow);
+    // Display the total price in the #ans element
+    document.getElementById("ans").textContent = `Total Price: Rs ${sum}`;
 };
 
 // Add event listener to the button
